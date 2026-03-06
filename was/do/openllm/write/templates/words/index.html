@@ -1,0 +1,21 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>A Meaningful Page Title</title>
+    <link rel="stylesheet" href="{% static 'write/style.css'%}">
+</head>
+
+<body>
+{%for store in store_list%}
+<ul>
+    <li>
+    <a href="{% url 'write:detail' store.id %}">{{store.id}} -- {{store.store_name}}
+    </li>
+<ul>
+{% endfor %}
+</body>
+</html>
+
+
